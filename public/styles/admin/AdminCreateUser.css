@@ -1,0 +1,49 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.main{
+    display: flex;
+}
+.main-content{
+    flex: 1;
+    background-color: #141A28;
+    color: white;
+    height: auto;
+}
+.container{
+     margin:130px auto;
+     height:auto;
+     width: fit-content;
+     border: 2px solid white;
+ }
+ form{
+    margin: 0px 30px ;
+ }
+ form input,label{
+    margin-top: 30px;
+    font-size: 20px ;
+    background-color: #1C2438;
+    color:aliceblue
+ }
+h2{
+   text-align: center;
+   margin-top: 10px;
+
+}
+ select,option{
+    margin-top: 30px;
+    font-size: 20px;
+    color: white;
+    background-color: #1C2438;
+ } 
+
+ #belowbtn{
+    width: 100px;
+    height: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.gender{
+   display: flex;
+}

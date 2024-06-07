@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../includes/principal-head', { title: 'Dashboard' }) %>
+    <link rel="stylesheet" href="/styles/principal/principal.css">
+</head>
+<body>
+    <div class="main">
+        <%- include('../includes/principal-aside') %>
+        <div class="main-content">
+            <%- include('../includes/principal-header', { title: 'Dashboard', subTitle: 'Welcome To Your Dashboard' }) %>
+            <div class="content-container">
+                <div class="top-container">
+                    <div class="container1">
+                        <h3>Achievement</h3>
+                        <p><%= achievementsCount %></p>
+                    </div>
+                    <div class="container2">
+                        <h3>Events</h3> 
+                        <p><%= upcomingEventsCount %></p> <!-- Display count of upcoming events -->
+                    </div>
+                    <div class="container3">
+                        <h3>Leave</h3>
+                        <p><%= leaveCount %></p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

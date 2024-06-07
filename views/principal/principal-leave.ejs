@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/styles/principal/side-Header.css" />
+    <link rel="stylesheet" href="/styles/principal/top-Header.css" />
+    <title>Principle Leave</title>
+    <link rel="stylesheet" href="/styles/principal/principleleave.css" />
+  </head>
+  <body>
+    <div class="main">
+      <%- include('../includes/principal-aside') %>
+      <div class="main-content">
+        <%- include('../includes/principal-header', { title: 'Leave Management'
+        , subTitle: 'Managing Leave' }) %>
+        <div class="container">
+          <div class="tablecontent">
+            <table>
+              <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <TH>Start Date</TH>
+                <th>End Date</th>
+                <TH>Reason</TH>
+                <th>Approvement</th>
+              </tr>
+              <tr>
+                <td id="same">1</td>
+                <td>Tejas</td>
+                <td id="same">18/1/24</td>
+                <td id="same">28/1/24</td>
+                <td>for Attaining Art of living program</td>
+                <td>
+                  <button id="Decline">Decline</button>
+                  <button id="Approval">Approval</button>
+                </td>
+              </tr>
+              <tr>
+                <td id="same">2</td>
+                <td>Priya</td>
+                <td id="same">25/1/24</td>
+                <td id="same">2/2/24</td>
+                <td>Leave for death anniversary</td>
+                <td>
+                  <button id="Decline">Decline</button>
+                  <button id="Approval">Approval</button>
+                </td>
+              </tr>
+              <tr>
+                <td id="same">3</td>
+                <td>Vikrant</td>
+                <td id="same">20/2/24</td>
+                <td id="same">26/2/24</td>
+                <td>Leave for marraige ceremony</td>
+                <td>
+                  <button id="Decline">Decline</button>
+                  <button id="Approval">Approval</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../includes/staff-head', { title : "Apply for Leave"}) %>
+    <link rel="stylesheet" href="/styles/staff/employee-leaveapply.css" />
+  </head>
+  <body>
+    <div class="main">
+      <%- include('../includes/staff-aside') %>
+      <div class="main-content">
+        <%- include('../includes/staff-header', { title: 'Apply for leave' ,
+        subTitle: '' }) %>
+        <div class="container">
+          <div class="leaves-left">
+            <p>Leaves Left: <%= leavesLeft %></p>
+          </div>
+          <form action="/staff/staff-leaveapply" method="post">
+            <!-- Assuming POST method -->
+            <!-- Hidden input field to store user's email or user ID -->
+            <input type="hidden" name="userEmail" value="<%= userEmail %>" />
+            <!-- Check if user object contains email field -->
+
+            <div>
+              <label for="title">Title :</label>
+              <input id="t" type="text" name="title" placeholder="Leave Title" />
+            </div>
+            <div>
+              <label>From: </label>
+              <input id="f" type="date" name="fromDate" placeholder="From" />
+            </div>
+            <div>
+              <label>To: </label>
+              <input type="date" id="to" name="toDate" placeholder="To" />
+            </div>
+            <div>
+              <label>Leave type :</label>
+              <select name="leaveType">
+                <option value="" disabled selected>Select a Leave Type</option>
+                <option value="PL">Privilege leave (PL)</option>
+                <option value="SL">Sick leave (SL)</option>
+                <option value="CL">Casual leave (CL)</option>
+              </select>
+            </div>
+            <div class="buttonn">
+              <button type="submit">Confirm</button>
+              <button type="button" onclick="window.history.back()">
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+  </body>
+</html>

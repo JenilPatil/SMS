@@ -1,0 +1,89 @@
+<div class="menu">
+  <div class="topmenu">
+    <h1>Staff</h1>
+  </div>
+    <div class="logo">
+    <div>
+      <img style="height: 150px; width: 150px; border-radius: 100px; margin-left: 4.9vw;" src="/userImg/<%= userPhoto %>" alt="<%= staffName %>'s Photo" />
+    </div>
+    <p><b><%= staffName %></b></p>
+  </div>
+  <div class="para1">
+    <i class="fa-solid fa-house"></i>
+    <a href="../staff/staff-dashboard">Dashboard </a>
+  </div>
+  <div class="para2">
+    <h5>Data</h5>
+    <div class="content">
+      <i class="fa-solid fa-user-group"></i
+      ><a href="../staff/staff-profile">Profile Information</a>
+    </div>
+    <div class="content">
+      <i class="fa-solid fa-trophy"></i
+      ><a href="../staff/staff-ach">Achievement</a>
+    </div>
+    <div class="content">
+      <i class="fa-regular fa-calendar-check"></i
+      ><a href="../staff/staff-event">Events</a>
+    </div>
+    <div class="content">
+      <i class="fa-solid fa-clock"></i
+      ><a href="../staff/staff-leave">Leave Request</a>
+    </div>
+    <div class="content">
+      <i class="fa-solid fa-money-bill"></i
+      ><a href="../staff/staff-salary">Salary</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Get all links with class "content"
+  var links = document.querySelectorAll(".content a");
+  // Get the link within div class "para1"
+  var para1Link = document.querySelector(".para1 a");
+
+  // Function to remove blue color from all links and their corresponding <i> tags
+  function removeBlueColor() {
+    links.forEach(function (link) {
+      link.style.color = "";
+      link.previousElementSibling.style.color = "";
+    });
+    para1Link.style.color = "";
+    para1Link.previousElementSibling.style.color = "";
+  }
+
+  // Loop through each link
+  links.forEach(function (link) {
+    // Add click event listener to each link
+    link.addEventListener("click", function () {
+      // Remove blue color from all links and their corresponding <i> tags
+      removeBlueColor();
+      // Add blue color to the clicked link and its corresponding <i> tag
+      this.style.color = "cornflowerblue";
+      this.previousElementSibling.style.color = "cornflowerblue";
+    });
+
+    // Check if the link is the currently active page
+    if (link.href === window.location.href) {
+      link.style.color = "cornflowerblue"; // Apply blue color if it's active
+      // Set the color of the corresponding <i> tag to match the <a> tag
+      link.previousElementSibling.style.color = "cornflowerblue";
+    }
+  });
+
+  // Check if the link within div class "para1" is the currently active page
+  if (para1Link.href === window.location.href) {
+    para1Link.style.color = "cornflowerblue"; // Apply blue color if it's active
+    // Set the color of the corresponding <i> tag to match the <a> tag
+    para1Link.previousElementSibling.style.color = "cornflowerblue";
+  } else {
+    para1Link.addEventListener("click", function () {
+      // Remove blue color from all links and their corresponding <i> tags
+      removeBlueColor();
+      // Add blue color to the clicked link and its corresponding <i> tag
+      this.style.color = "cornflowerblue";
+      this.previousElementSibling.style.color = "cornflowerblue";
+    });
+  }
+</script>

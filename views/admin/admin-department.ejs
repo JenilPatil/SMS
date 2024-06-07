@@ -1,0 +1,44 @@
+<!-- admin-department.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../includes/admin-head',{ title : "Admin Department"})%>
+    <link rel="stylesheet" href="/styles/admin/AdminDepartment.css" />
+</head>
+<body>
+    <div class="main">
+         <%- include('../includes/admin-aside') %>
+      <div class="main-content">
+        <%- include('../includes/admin-header', { title: 'Department' , subTitle: 'List of  all departments' }) %>
+        <div class="container">
+          <div class="tablecontent">
+            <table>
+              <tr>
+                <th>Sr.No.</th>
+                <th>Department Name</th>
+                <th>HOD Name</th>
+                <th>Contact No.</th>
+                <th>Email</th>
+                <th>Members</th>
+              </tr>
+              <% departments.forEach((department, index) => { %>
+              <tr>
+                <td><%= index + 1 %></td>
+                <td><%= department.name %></td>
+                <td><%= department.members[0].firstname %> <%= department.members[0].lastname %></td>
+                <td><%= department.members[0].phonenumber %></td>
+                <td><%= department.members[0].email %></td>
+                <td>
+                  <% department.members.forEach((member, memberIndex) => { %>
+                    <%= member.firstname %> <%= member.lastname %><br>
+                  <% }) %>
+                </td>
+              </tr>
+              <% }) %>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

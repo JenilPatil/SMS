@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../includes/staff-head', { title : "Add Your Achievement"}) %>
+    <link rel="stylesheet" href="/styles/staff/employee-achadd.css" />
+  </head>
+  <body>
+    <div class="main">
+      <%- include('../includes/staff-aside') %>
+      <div class="main-content">
+        <%- include('../includes/staff-header', { title: 'Add Your Achievement', subTitle: '' }) %>
+        <div class="container">
+          <div>
+            <form action="/staff/staff-achadd" method="POST" enctype="multipart/form-data">
+              <!-- Added enctype attribute -->
+              <div>
+                <input type="text" placeholder="Achievement Title" name="title" />
+              </div>
+              <div>
+                <input type="date" placeholder="Date of Achievement" name="date" />
+              </div>
+              <div>
+                <input type="text" placeholder="Detail Description of Achievement" name="description" />
+              </div>
+              <div>
+                <input type="file" placeholder="Add Certificate" name="certificate" />
+                <!-- Added name attribute -->
+              </div>
+              <div class="buttonn">
+                <button id="Decline" type="submit">Confirm</button>
+                <button id="Approval" type="button" onclick="window.history.back()">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+  </body>
+</html>

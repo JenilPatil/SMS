@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../includes/admin-head',{ title : "Staff Members"})%>
+    <link rel="stylesheet" href="/styles/admin/adminstaff.css" />
+  </head>
+  <body>
+    <div class="main">
+      <%- include('../includes/admin-aside') %>
+      <div class="main-content">
+        <%- include('../includes/admin-header', { title: 'Staff Members' ,
+        subTitle: 'Managing Staff Members' }) %>
+        <div class="container">
+          <div class="tablecontent">
+            <table>
+              <tr>
+                <th>NAME</th>
+                <TH>Date Of Birth</TH>
+                <th>PHONE NO.</th>
+                <TH>EMAIL</TH>
+                <th>ROLE</th>
+                <th>Action</th>
+                <!-- New column for delete action -->
+              </tr>
+              <% allUsers.forEach(user => { %>
+              <tr>
+                <td><%= user.firstname %> <%= user.lastname %></td>
+                <td id="same"><%= user.dateofbirth %></td>
+                <td><%= user.phonenumber %></td>
+                <td><%= user.email %></td>
+                <td><%= user.role %></td>
+                <td>
+                  <!-- Form for deleting user -->
+                  <form
+                    action="/admin/staff-member/delete/<%= user._id %>"
+                    method="POST"
+                  >
+                    <button type="submit">Delete</button>
+                  </form>
+                </td>
+              </tr>
+              <% }); %>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

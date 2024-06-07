@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../includes/staff-head', { title : "Dashboard"}) %>
+    <link rel="stylesheet" href="/styles/staff/menu.css" />
+  </head>
+
+  <body>
+    <div class="main">
+      <%- include('../includes/staff-aside') %>
+      <div class="main-content">
+        <%- include('../includes/staff-header', { title: 'Dashboard' , subTitle:
+        'Welcome To Your Dashboard' }) %>
+        <div class="container0">
+          <h3>Department</h3>
+          <p><%= staffMember.department %></p>
+        </div>
+        <div class="top-container">
+          <div class="container1">
+            <h3>Total Achievement</h3>
+            <p><%= latestAchievement %></p>
+          </div>
+          <div class="container2">
+            <h3>Current Leave Request</h3>
+            <p><%= currentLeaveRequest ? currentLeaveRequest.title : 'No current leave request' %></p>
+          </div>
+          <div class="container3">
+            <h3>Salary</h3>
+            <p><%= salary %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

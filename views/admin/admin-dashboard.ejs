@@ -1,0 +1,39 @@
+<!-- admin-dashboard.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../includes/admin-head',{ title : "Admin Dashboard"})%>
+    <link rel="stylesheet" href="/styles/admin/admin.css">
+</head>
+<body>
+    <div class="main">
+        <%- include('../includes/admin-aside') %>
+    <div class="main-content">
+        <%- include('../includes/admin-header', { title: 'Dashboard' , subTitle: 'Welcome To Your Dashboard' }) %>
+        <div class="content-container">
+            <div class="top-container">
+                <div class="container1">
+                    <h3>Total Members</h3>
+                    <p><%= staffCount %></p>
+                </div>
+                <div class="container2">
+                    <h3>Total Achievements</h3>
+                    <p><%= totalAchievements %></p>
+                </div>
+                <div class="container3">
+                    <h3>Upcoming Events</h3>
+                    <% if (upcomingEvents.length > 0) { %>
+                      <ul>
+                        <% upcomingEvents.forEach(event => { %>
+                          <li><%= event.name %> - <%= event.date %> at <%= event.time %> (<%= event.place %>)</li>
+                        <% }) %>
+                      </ul>
+                    <% } else { %>
+                      <p>No upcoming events</p>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

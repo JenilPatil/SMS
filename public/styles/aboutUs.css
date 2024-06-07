@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  
+background-color: #141a2b;
+}
+.content {
+  height: 100%;
+  color: white;
+  text-align: center;
+}
+.contenty-p {
+  font-size: 25px;
+  font-weight: 900;
+  margin: 20px 120px;
+}
+.cont-p {
+margin: 20px 120px;
+font-size: 20px;
+}
+#welcome {
+  margin: 40px 120px ;
+  font-size:29px;
+
+}
+#cont {
+  font-size: 20px;
+  margin: 50px 120px  ;
+}
+.cont-p a {
+  color: #9791d2;
+  text-decoration: none;
+}
+.cont-p a:hover {
+  color: #83d2df;
+  text-decoration: underline;
+}

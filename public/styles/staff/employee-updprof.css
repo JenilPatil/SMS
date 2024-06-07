@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.main-content {
+    flex: 1;
+    background-color: #141A28;
+    color: white;
+    height: 105vh;
+}
+#address{
+    width: auto;
+}
+.container input {
+    margin-top: 30px;
+    margin-left: 22px;
+    height: 30px;
+    width: 440px;
+    color: white;
+    background-color: #1C2438;
+}
+.buttonn {
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 770px;
+}
+
+#Decline {
+    border-radius: 5px;
+    border: 2px solid green;
+    color: green;
+}
+
+#Approval {
+    border-radius: 5px;
+    border: 2px solid red;
+    color: Red;
+}

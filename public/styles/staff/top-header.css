@@ -1,0 +1,53 @@
+body{
+ background-color: #141A28;
+}
+.main-content{
+  margin-left: 285px;
+  padding: 10px;
+}
+.main-content {
+    flex: 1;
+    background-color: #141A28;
+    color: white;
+}
+
+.header {
+    height: 30px;
+    display: flex;
+}
+
+.header i {
+    font-size: 25px;
+    color: white;
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+.header input {
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 30px;
+    color: white;
+    background-color: #1C2438;
+}
+
+.heading {
+    margin: 40px 10px auto;
+}
+.heading-but button{
+    margin-top: 30px;
+    color: white;
+    margin-left: 1000px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #1C2438;
+    border-color: rgb(255, 255, 255);
+    opacity: 0.5;
+}
+.heading-but button:hover{
+    opacity: 1;
+}
+.heading p {
+    color: green;
+}

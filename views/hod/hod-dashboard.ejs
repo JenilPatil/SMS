@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../includes/HOD-head', { title: 'Dashboard' }) %>
+    <link rel="stylesheet" href="/styles/hod/HOD.css" />
+</head>
+<body>
+    <div class="main">
+        <%- include('../includes/hod-aside') %>
+        <div class="main-content">
+            <%- include('../includes/hod-header', { title: 'Dashboard', subTitle: 'Welcome To Your Dashboard' }) %>
+            <div class="top-container">
+                <div class="container1">
+                    <h3>Department</h3>
+                    <p><%= department %></p>
+                </div>
+                <div class="container2">
+                    <h3>Events</h3>
+                    <p><%= upcomingEventsCount %></p>
+                </div>
+                <div class="container3">
+                    <h3>Leave Request</h3>
+                    <p><%= pendingLeaveCount %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

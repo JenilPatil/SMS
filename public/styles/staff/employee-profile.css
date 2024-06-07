@@ -1,0 +1,44 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.heading{
+    display: flex;
+}
+.heading img{
+    margin-left: 150%;
+    height: 200px;
+    width: 200px;
+}
+
+.main-content {
+    flex: 1;
+    background-color: #141A28;
+    color: white;
+    height: 135vh;
+}
+#address{
+    width: auto;
+}
+.container p{
+    margin-top: 30px;
+    margin-left: 13%;
+    height: 30px;
+    width: 60vw;
+    color: white;
+    background-color: #1C2438;
+}
+
+.leavebtn{
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    width: 168px;
+    height: 20px;
+    margin-top: 80px;
+    margin-left: 900px;
+}
+.leavebtn a{
+    margin-right: 7px;
+    color: rgba(56, 59, 139, 1);
+}

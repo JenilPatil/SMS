@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../includes/HOD-head' , {title : 'Salary'})%>
+
+    <link rel="stylesheet" href="/styles/hod/HOD-salary.css" />
+  </head>
+
+  <body>
+    <div class="main">
+      <%- include('../includes/hod-aside') %>
+
+      <div class="main-content">
+        <%- include('../includes/hod-header', { title: 'Salary' , subTitle: ''
+        }) %>
+
+        <div class="container">
+          <div class="tablecontent">
+            <table>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Basic Salary</th>
+                <th>A.G.P Salary</th>
+                <th>D.A Salary</th>
+                <th>H.R.A Salary</th>
+                <th>Other Salary</th>
+                <th>Total Salary</th>
+              </tr>
+              <tr>
+                <td id="same">1</td>
+                <td id="same"><%= staffSalary.name %></td>
+                <td id="same"><%= staffSalary.salary.basic %></td>
+                <td id="same"><%= staffSalary.salary.agp %></td>
+                <td id="same"><%= staffSalary.salary.da %></td>
+                <td id="same"><%= staffSalary.salary.hra %></td>
+                <td id="same"><%= staffSalary.salary.other %></td>
+                <td id="same"><%= staffSalary.salary.total %></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

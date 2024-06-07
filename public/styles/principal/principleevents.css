@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.main{
+    display: flex;
+}
+.main-content{
+    flex: 1;
+    background-color: #141A28;
+    color: white;
+    height: auto;
+}
+.container{
+    border: 2px;
+     margin:100px auto;
+     height:auto;
+ }
+ table{
+     padding: 20px;
+     margin: 40px auto;
+ }
+ th{
+     background-color: rgb(27, 27, 90);
+     width: 15vw;
+     height: 6vh;
+     border: 2px solid white;
+ }
+ #same{
+     padding-left: 50px;
+ }
+ td{
+     border-collapse: collapse;
+     border-left: 2px solid white;
+     border-right: 2px solid white;
+     border-bottom: 2px solid white;
+     padding: 10px;
+     text-align: center;
+ }

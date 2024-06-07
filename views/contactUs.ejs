@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/styles/contactus.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+
+  <body>
+    <%- include("includes/header")%>
+    <div class="container">
+      <div class="heading">
+        <h1>Contact Us</h1>
+      </div>
+      <form action="/contactUs" method="POST">
+        <label for="Name"
+          ><span class="material-symbols-outlined"> perm_contact_calendar</span
+          >Name</label
+        >
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter Your Name"
+          name="username"
+        /><br />
+        <label for="Email"
+          ><span class="material-symbols-outlined">mail</span>Email</label
+        >
+        <input
+          type="email"
+          id="Email"
+          placeholder="Enter Your email"
+          name="email"
+        />
+        <label for="Message">Message</label>
+        <textarea
+          name="message"
+          id="Message"
+          cols="30"
+          rows="6"
+          placeholder="Enter Your Message"
+        ></textarea>
+        <div class="buttonarea">
+          <button type="reset">Cancel</button>
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

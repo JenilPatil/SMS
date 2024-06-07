@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #141a2b;
+}
+
+.container {
+  margin: 10vh auto;
+  width: 50vw;
+  color: white;
+  background: linear-gradient(60deg, rgb(23, 1, 80), rgba(80, 207, 203, 1));
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  background-color: #141a2b;
+  font-size: 18px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+input,
+textarea {
+  margin: 10px 0 ;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #1e2a47;
+  color: white;
+}
+
+.buttonarea {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  background-color: #1e2a47;
+  color: white;
+  font-size: 16px;
+  height: 40px;
+  width: 100px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #141a2b;
+}
+
+textarea {
+  margin-top: 10px;
+  resize: vertical;
+}
+
+/* Material Icons styling */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-size: 24px;
+  margin-right: 5px;
+}

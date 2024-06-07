@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../includes/principal-head', { title : "Your Profile"}) %>
+    <link rel="stylesheet" href="/styles/staff/employee-profile.css" />
+  </head>
+
+  <body>
+    <div class="main">
+      <%- include('../includes/principal-aside') %>
+      <div class="main-content">
+        <div class="header">
+          
+          <div class="heading-but">
+            <form action="/logout">
+              <button type="submit">Log Out</button>
+            </form>
+          </div>
+        </div>
+        <div class="heading">
+          <div>
+            <h1>Your Profile</h1>
+          </div>
+          <div>
+            <img src="/userImg/<%= user.userphoto %>"/>
+          </div>
+        </div>
+        <div class="container">
+          <div>
+            <p>Name: <%= user.firstname %> <%= user.lastname %></p>
+            <p>Phone Number: <%= user.phonenumber %></p>
+            <p>Emergancy Number: <%= user.emgnumber %></p>
+            <p>Date of Birth: <%= user.dateofbirth %></p>
+
+            <p>Gender: <%= user.gender %></p>
+            <p>Email : <%= user.email %></p>
+            
+
+<p>Experience: <%= user.experience %> Years Experience</p>
+<p>Qualification: <%= user.qualification %></p>
+          
+          <div class="leavebtn">
+            <a href="principal-updprof">Update Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

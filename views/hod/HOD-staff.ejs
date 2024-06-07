@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../includes/HOD-head' , {title : 'Staff Members'})%>
+    <link rel="stylesheet" href="/styles/hod/HOD-profile.css">
+</head>
+<body>
+    <div class="main">
+        <%- include('../includes/hod-aside') %>
+        <div class="main-content">
+            <%- include('../includes/hod-header', { title: 'Staff Members' , subTitle: '' }) %>
+            <div class="container">
+                <div class="tablecontent">
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>NAME</th>
+                            <th>AGE</th>
+                            <th>PHONE NO.</th>
+                            <th>EMAIL</th>
+                            <th>ROLE</th>
+                        </tr>
+                        <% staffMembers.forEach(function(staffMember, index) { %>
+                            <tr>
+                                <td id="same"><%= index + 1 %></td>
+                                <td><%= staffMember.firstname %></td>
+                                <td id="same"><%= staffMember.dateofbirth %></td>
+                                <td><%= staffMember.phonenumber %></td>
+                                <td><%= staffMember.email %></td>
+                                <td><%= staffMember.role %></td>
+                            </tr>
+                        <% }); %>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

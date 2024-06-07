@@ -1,0 +1,46 @@
+body{
+ background-color: #141A28;
+
+}
+.main-content{
+  margin-left: 285px;
+  padding: 10px;
+}
+.header {
+  height: 20px;
+  margin-top: 10px;
+}
+.header i {
+  margin-left: 10px;
+  font-size: 25px;
+  color: white;
+}
+.header input {
+  margin-left: 10px;
+  height: 30px;
+  color: white;
+  background-color: #1c2438;
+}
+.header button{
+  color: white;
+    margin-left: 1000px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #1C2438;
+    border-color: rgb(255, 255, 255);
+    opacity: 0.5;
+}
+.header button:hover{
+  opacity: 1;
+}
+.heading {
+  margin: 30px 20px auto;
+}
+.heading p {
+  color: green;
+}
+.headerandheading {
+  height: 30vh;
+  background-color: red;
+}

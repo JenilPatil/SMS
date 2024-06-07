@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../includes/admin-head',{ title : "Events"})%>
+    <link rel="stylesheet" href="/styles/admin/AdminEvent.css">
+</head>
+<body>
+    <div class="main">
+        <%- include('../includes/admin-aside') %>
+        <div class="main-content">
+            <%- include('../includes/admin-header', { title: 'Events' , subTitle: 'List of Upcoming Events' }) %>
+
+            <div class="container">
+                <div class="tablecontent">
+                    <table>
+                        <tr>
+                            <th>EVENT NAME</th>
+                            <th>Coordinator Name</th>
+                            <th>Contact No.</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Place</th>
+                            <th>Target Audience</th>
+                        </tr>
+                        <% events.forEach(event => { %>
+                        <tr>
+                            
+                            <td><%= event.name %></td>
+                            <td><%= event.coordinator %></td>
+                            <td><%= event.contact %></td>
+                            <td><%= event.date %></td>
+                            <td><%= event.time %></td>
+                            <td><%= event.place %></td>
+                            <td><%= event.targetAudience %></td>
+                        </tr>
+                        <% }) %>
+                    </table>
+                <div class="addevent">
+                <a href="../admin/admin-addevent">Add Upcoming Event</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

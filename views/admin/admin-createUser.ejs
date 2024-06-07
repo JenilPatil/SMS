@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../includes/admin-head',{ title : "Create User"})%>
+    <link rel="stylesheet" href="/styles/admin/AdminCreateUser.css" />
+  </head>
+  <body>
+    <div class="main">
+      <%- include('../includes/admin-aside') %>
+      <div class="main-content">
+        <%- include('../includes/admin-header', { title: 'Create User' ,
+        subTitle: 'Creating a new user profile' }) %>
+        <div class="container">
+          <form
+            action="/admin/admin-createUser"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <label for="email">EMAIL</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="E-Mail"
+              name="email"
+            /><br />
+
+            <label for="pwd">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="pwd"
+              placeholder="Password"
+            /><br />
+
+            <label for="Role" name="role">Select Role</label>
+            <select name="role" id="Role" required>
+              <option value="" disabled selected>Select a Role</option>
+              <option value="principal">Principal</option>
+              <option value="hod">Head Of Department</option>
+              <option value="staff">Staff</option>
+            </select>
+            <br />
+            <label for="salary">Salary</label>
+            <input
+              type="number"
+              name="salary"
+              id="salary"
+              placeholder="salary"
+            /><br />
+            <button type="reset" id="belowbtn">Reset</button>
+            <button type="submit" id="belowbtn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

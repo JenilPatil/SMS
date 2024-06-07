@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../includes/HOD-head', { title : 'Achievements'}) %>
+    <link rel="stylesheet" href="/styles/hod/HOD-ach.css">
+</head>
+<body>
+    <div class="main">
+        <%- include('../includes/hod-aside') %>
+        <div class="main-content">
+            <%- include('../includes/hod-header', { title: 'Achievements', subTitle: '' }) %>
+            <div class="container">
+                <div class="tablecontent">
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>NAME</th>
+                            <TH>Achievement Date</TH>
+                            <th>Achievement Title</th>
+                            <th>Description</th>
+                            <TH>Certificate</th>
+                        </tr>
+                        <% achievements.forEach((achievement, index) => { %>
+                        <tr>
+                            <td><%= index + 1 %></td>
+                            <td><%= achievement.name %></td>
+                            <td><%= achievement.date %></td>
+                            <td><%= achievement.title %></td>
+                            <td><%= achievement.description %></td>
+                             <td> <img style="height: 300px; width: 300px;" src="/achievement/<%= achievement.certificate %>"></td>
+                        </tr>
+                        <% }) %>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

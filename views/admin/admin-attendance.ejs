@@ -1,0 +1,42 @@
+<!-- admin-attendance.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../includes/admin-head',{ title : "Attendance"})%>
+    <link rel="stylesheet" href="/styles/admin/AdminAttendance.css">
+</head>
+<body>
+    <div class="main">
+        <%- include('../includes/admin-aside') %>
+        <div class="main-content">
+        <%- include('../includes/admin-header', { title: 'Staff Attendance' , subTitle: 'Managing Staff Attendance' }) %>
+        <div class="container">
+            <div class="tablecontent">
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>In Time</th>
+                        <th>Out Time</th>
+                        <th>Total Time</th>
+                        <th>Status</th>
+                    </tr>
+                    <% attendanceData.forEach(entry => { %>
+                        <tr>
+                            <td><%= entry.Date %></td>
+                            <td><%= entry.Name %></td>
+                            <td><%= entry.Email %></td>
+                            <td><%= entry["In Time"] %></td>
+                            <td><%= entry["Out Time"] %></td>
+                            <td><%= entry["Total Time"] %></td>
+                            <td><%= entry.Status %></td>
+                        </tr>
+                    <% }); %>
+                </table>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

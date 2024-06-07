@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../includes/staff-head', { title : "Leave Page"}) %>
+    <link rel="stylesheet" href="/styles/staff/employee-leave.css" />
+  </head>
+
+  <body>
+    <div class="main">
+      <%- include('../includes/staff-aside') %>
+      <div class="main-content">
+        <%- include('../includes/staff-header', { title: 'Leave Requests',
+        subTitle: 'Managing Leave' }) %>
+        <div class="container">
+          <div class="tablecontent">
+            <table>
+              <thead>
+                <tr>
+                
+                  <th>Name</th>
+                  <th>Title</th>
+                  <th>Start Date</th>
+                  <th>End Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% currentLeaves.forEach(leave => { %>
+                <tr>
+                 
+                  <td><%= user.firstname %> <%= user.lastname %></td>
+                  <td><%= leave.title %></td>
+                  <td><%= leave.fromDate %></td>
+                  <td><%= leave.toDate %></td>
+                  <td><%= leave.status %></td>
+                </tr>
+                <% }); %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="leavebtn">
+          <a href="../staff/staff-leaveapply">Apply for Leave</a>
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>

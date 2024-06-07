@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.main-content{
+    height: auto;
+}
+.Achievement{
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+}
+/* .Ach-img{
+    height: 10px;
+    width: 10px;
+} */
+.Ach-p p{
+    margin-top: 40px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.leavebtn{
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    width: 168px;
+    height: 20px;
+    margin-top: 80px;
+    margin-left: 970px;
+    margin-bottom: 30px;
+}
+.leavebtn a{
+    margin-right: 7px;
+    color: rgba(56, 59, 139, 1);
+}

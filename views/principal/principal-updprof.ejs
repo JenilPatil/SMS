@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../includes/principal-head', { title : "Update Profile"}) %>
+    <!-- <link rel="stylesheet" href="/styles/staff/employee-updprof.css" /> -->
+       <link rel="stylesheet" href="/styles/admin/AdminCreateUser.css">
+  </head>
+
+  <body>
+    <div class="main">
+      <%- include('../includes/principal-aside') %>
+      <div class="main-content">
+        <%- include('../includes/principal-header', { title: 'Update Profile' ,
+        subTitle: '' }) %>
+
+        <div class="container">
+                <form action="/principal/principal-updprof" method="POST" enctype="multipart/form-data">
+                    <h2><u>Personal Details</u></h2>
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" placeholder="First Name" name="firstName"><br>
+                        <label for="lname" id="laname">Last Name</label>
+                        <input type="text" id="lname" placeholder="Second Name"  name="lastName"><br>
+                    
+                    <label for="phoneNumber">Contact Number</label>
+                    <input type="tel" id="phoneNumber" maxlength="10" placeholder=" Phone Number" name="phoneNumber"><br>
+                     <label for="emnumber">Emergency Number</label>
+                    <input type="tel" id="emnumber" maxlength="10" placeholder=" emergency Number" name="emnumber"><br>
+
+                     <label for="DOB">Date Of Birth</label>
+                    <input type="date" name="dateOfBirth" id="DOB"><br>
+
+
+                    <div class="gender">
+                        <label for="gender" >Gender:</label>
+                        <label for="male">Male</label>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="female">Female</label>
+                        <input type="radio" id="female" name="gender" value="female"><br>
+                    </div>
+
+<label for="file">Photo</label>
+                    <input type="file" id="file" name="userPhoto"><br><br>
+
+
+                    <h2><u>Personal Address</u></h2>
+<!-- <label for="address">Address</label>
+                    <input type="text" name="address" id="address"><br> -->
+
+                     <label for="adress">House No.</label>
+                    <input type="text" name="houseno" id="address"><br>
+                    <label for="society">Society Name</label>
+                    <input type="text" name="society" id="society"><br>
+                    <label for="area">Area Name</label>
+                    <input type="text" name="area" id="Area"><br>
+                    <label for="city">City Name</label>
+                    <input type="text" name="City" id="city"><br>
+                    <h2><u>Office Details</u></h2>
+
+
+                     <label for="DOJ">Date of Joining</label>
+                    <input type="date" name="dateOfJoining" id="DOJ"><br>
+
+                    <label for="qualification">Qualification</label>
+                    <input type="text" name="qualification" id="qualification"><br>
+
+                    <label for="exp">Experience</label>
+                    <input type="number" name="experience" id="exp"><br>
+                    
+                    <button type="reset" id="belowbtn">Reset</button>
+                    <button type="submit" id="belowbtn">Submit</button>
+                </form>
+            </div >
+      </div>
+    </div>
+  </body>
+</html>

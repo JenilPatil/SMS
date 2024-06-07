@@ -1,0 +1,58 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.main-content{
+    height: 100vh;
+}
+.container0 {
+    background-color: rgba(27, 37, 55, 1);
+    margin-left: 80px;
+    margin-top: 20px;
+    height: 15vh;
+    width: 68.6vw;
+}
+.container0 p {
+    font-size: 30px;
+    margin: 10px;
+}
+.top-container {
+    margin: 20px 80px;
+    display: flex;
+}
+
+.container1 {
+    background-color: rgba(27, 37, 55, 1);
+    height: 30vh;
+    width: 22vw;
+}
+
+.container1 p {
+    font-size: 30px;
+    margin: 10px;
+}
+#container-ach{
+    font-size: 20px;
+}
+
+h3 {
+    margin: 10px;
+}
+
+.container2,
+.container3 {
+    background-color: rgba(27, 37, 55, 1);
+    margin-left: 20px;
+    height: 30vh;
+    width: 22vw;
+}
+
+.container2 p {
+    font-size: 30px;
+    margin: 10px;
+}
+
+.container3 p {
+    font-size: 30px;
+    margin: 10px;
+}

@@ -1,0 +1,41 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  height: 60px;
+  background-color: #0f1035;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header div .a {
+  margin-left: 120px;
+  text-decoration: none;
+  color: white;
+}
+.nav-Header_1 {
+  margin-right: 120px;
+}
+.nav-Header_1 a {
+    font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+.border {
+  border: 1.5px solid transparent;
+}
+.border:hover {
+  border: 2px solid white;
+  border-radius: 5px;
+  color:#0f1035 ;
+  background-color: #ffffff;
+}
+.a {
+  font-size: 2rem;
+
+}
+.btn {
+  padding: 10px;
+}

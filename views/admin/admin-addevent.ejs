@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../includes/admin-head', { title: "Add Event" }) %>
+    <link rel="stylesheet" href="/styles/admin/AddEvent.css" />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .main {
+        display: flex;
+      }
+      .main-content {
+        flex: 1;
+        background-color: #141a28;
+        color: white;
+        height: auto;
+      }
+      .container {
+        color:white;
+        max-width: 600px; /* Adjust the maximum width as needed */
+        margin: 100px auto; /* Center the container horizontally */
+        padding: 20px; /* Add padding to create space around the content */
+        background-color: #141a28; /* Set a background color */
+        border-radius: 8px; /* Add rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+      }
+
+      /* Additional styling for form elements */
+      .container form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container .form-group {
+        margin-bottom: 20px;
+      }
+
+      .container label {
+        margin-bottom: 5px;
+      }
+
+      .container input[type="text"],
+      .container input[type="date"],
+      .container input[type="time"],
+       .container input[type="tel"] {
+        width: 100%;
+        background-color: #1c2438;
+        color: white;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      .container button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 40.5vw;
+      }
+
+      .container button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <%- include('../includes/admin-aside') %>
+      <div class="main-content">
+        <%- include('../includes/admin-header', { title: 'Add Event', subTitle:
+        'Create a new event' }) %>
+
+        <div class="container">
+          <form action="/admin/admin-addevent" method="POST">
+            <div class="form-group">
+              <label for="name">Event Name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="coordinator">Coordinator Name:</label>
+              <input type="text" id="coordinator" name="coordinator" required />
+            </div>
+            <div class="form-group">
+              <label for="name" >Contact No.</label>
+              <input  type="tel" id="contact" name="contact" required maxlength="10" />
+            </div>
+            <div class="form-group">
+              <label for="date">Date:</label>
+              <input type="date" id="date" name="date" required />
+            </div>
+            <div class="form-group">
+              <label for="time">Time:</label>
+              <input type="time" id="time" name="time" required />
+            </div>
+            <div class="form-group">
+              <label for="place">Place:</label>
+              <input type="text" id="place" name="place" required />
+            </div>
+            <div class="form-group">
+              <label for="targetAudience">Target Audience:</label>
+              <input
+                type="text"
+                id="targetAudience"
+                name="targetAudience"
+                required
+              />
+            </div>
+            <button type="submit">Add Event</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+.main {
+    display: flex;
+}
+
+.content {
+    margin-top: 3vh;
+    display: flex;
+}
+
+h5 {
+    color: #8E96A1;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+}
+
+.menu {
+    background-color: rgba(27, 37, 55, 1);
+    color: white;
+    width: 19vw;
+        position: fixed;
+    height: 100vh;
+}
+
+.topmenu h1 {
+    margin-top: 18px;
+    margin-left: 5px;
+}
+
+.topmenu {
+    display: flex;
+}
+
+.logo i {
+    margin-top: 10vh;
+    margin-left: 6.6vw;
+    font-size: 100px;
+}
+
+.logo p {
+    margin-top:5px;
+    text-align: center;
+}
+
+.para1 {
+    margin-top: 25px;
+    margin-left: 15%;
+    display: flex;
+}
+
+.para2 {
+    margin: 15%;
+}

@@ -1,0 +1,50 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+table {
+    padding: 20px;
+    margin: 20px auto;
+}
+
+th {
+    background-color: rgba(56, 59, 139, 1);
+    width: 15vw;
+    height: 6vh;
+    border: 1px solid white;
+}
+
+#same {
+    text-align: center;
+}
+
+td {
+    border-collapse: collapse;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 10px;
+    text-align: center;
+}
+
+.bottom {
+    background-color: rgba(56, 59, 139, 1);
+    height: 6vh;
+    width: 77.4vw;
+    margin-left: 22px;
+    margin-top: 180px;
+    margin-bottom: 30px;
+}
+.leavebtn{
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    width: 150px;
+    height: 20px;
+    margin-top: 80px;
+    margin-left: 970px;
+}
+.leavebtn a{
+    margin-right: 7px;
+    color: rgba(56, 59, 139, 1);
+}
